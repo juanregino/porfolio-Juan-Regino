@@ -1,0 +1,22 @@
+---
+import type { NavigationTypeString } from "astro:transitions/client";
+
+interface Props {
+  href: string;
+}
+const { href } = Astro.props;
+---
+
+<a
+  href={href}
+  class="rounded-full border border-white/10 flex justify-center items-center gap-x-3 py-2 px-4 bg-white/10 hover:scale-110 hover:bg-white/30 transition "
+  target="_blank"
+>
+  <slot />
+</a>
+
+<style is:global>
+  .shadow.md {
+    box-shadow: 0 0 35px 12px var(#17bab8) !important;
+  }
+</style>

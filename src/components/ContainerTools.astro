@@ -1,0 +1,51 @@
+---
+const Tools = [
+  {
+    name: "IntellijIdea",
+    color: "#F6009C",
+  },
+  {
+    name: "Git",
+    color: "#DE4C36",
+  },
+
+  {
+    name: "VS Code",
+    color: "#3DA9F2",
+  },
+  {
+    name: "NPM",
+    color: "#DC312F",
+  },
+  {
+    name: "Notion",
+    color: "#FAFAFA",
+  },
+  {
+    name: "Terminal",
+    color: "#FAFAFA",
+  },
+];
+
+import ToolTip from "../components/ToolTip.astro";
+import "../styles/global.css";
+import BoxSckills from "./BoxSckills.astro";
+import ItemsSkills from "./ItemsSkills.astro";
+---
+
+<BoxSckills
+>
+  <slot />
+
+  <ItemsSkills>
+    {
+      Tools.map((stack) => (
+        <li class="stack" style={{ "--background-dif": stack.color }} tool-tip>
+          <p class="stack__name">{stack.name}</p>
+          <ToolTip aria-hidden="true">{stack.name}</ToolTip>
+          <span class={`icon-${stack.name}`} />
+        </li>
+      ))
+    }
+  </ItemsSkills>
+</BoxSckills>

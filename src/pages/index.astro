@@ -1,0 +1,119 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Github from "../icons/Github.astro";
+import Linkedin from "../icons/Linkedin.astro";
+
+import SocialPill from "../components/SocialPill.astro";
+
+import SectionContainer from "../components/SectionContainer.astro";
+import ContainerSkills from "../components/ContainerSkills.astro";
+import Projects from "../components/Projects.astro";
+import ContainerSkillsBack from "../components/ContainerSkillsBack.astro";
+import ContainerSkillsApr from "../components/ContainerSkillsApr.astro";
+import ContainerTools from "../components/ContainerTools.astro";
+---
+
+<Layout titlePage="Porfolio ">
+  <main>
+    <SectionContainer
+      id="top"
+      class="flex flex-col items-center gap-y-3 py-36 pb-16 bg-white/5 rounded-lg md:min-h-screen"
+    >
+      <div class="grid place-content-center">
+        <Badge>Disponible para trabajar</Badge>
+      </div>
+      <h1
+        class="text-3xl lg:text-5xl text-yellow-500 font-bold flex flex-col items-center gap-y-3 pb-6"
+      >
+        Software Developer
+        <span class="text-white/60 font-semibold">Juan Pablo Regino</span>
+      </h1>
+
+      <!-- <h2 class="text-2xl text-wrap">
+        +1 Año de experiencia. Desarrollador web<span
+          class="text-yellow-500/90"
+        >
+          De Medelin, Colombia 🏴‍☠️.</span
+        >
+        <span class="opacity-80">
+          Me especializo encrear soluciones eficientes a los retos que me pone
+          la vida</span
+        >
+      </h2> -->
+      <h2 class="text-xl lg:text-2xl text-balance font-light">
+        FullStack React & Java
+      </h2>
+
+      <ul class="flex gap-x-3 mt-12">
+        <li class="flex">
+          <SocialPill href="facebook.com">
+            <Linkedin class="size-6" />LinkedIn</SocialPill
+          >
+        </li>
+        <li>
+          <!-- para poder que me tome la clase debo poner en el componente class={
+            Astro.props.class
+          } -->
+          <SocialPill href="github.com"
+            ><Github class="size-6" /> GitHub</SocialPill
+          >
+        </li>
+      </ul>
+    </SectionContainer>
+
+    <SectionContainer id="projects" class="relative py-40 lg:px-52 px-8">
+      <div
+        class="absolute inset-0 -z-10 h-full w-full bg-[#090c1a] bg-[size:6rem_4rem]"
+      >
+        <div
+          class="absolute bottom-0 left-0 right-0 top-[250px] bg-[radial-gradient(circle_350px_at_50%_400px,#17BAB8,transparent)] opacity-30"
+          style="filter: blur(100px);"
+        >
+        </div>
+      </div>
+      <h2 class="text-5xl font-bold text-blue-400 mb-9">Proyectos</h2>
+      <h2 class="text-xl font-semibold text-gray-400 mb-9">
+        Mis proyectos destacados
+      </h2>
+
+      <Projects  client:load/>
+    </SectionContainer>
+    <h2 class="m-auto ml-8 lg:ml-52 text-5xl font-bold text-blue-400 mb-16">
+      Tecnologias
+    </h2>
+    <SectionContainer
+      id="skills"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-20 lg:px-52 mb-16 px-4"
+    >
+      <ContainerSkills>
+        <h3
+          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#c9fffe] to-[#00cfef] bg-clip-text text-transparent"
+        >
+          FrontEnd
+        </h3>
+      </ContainerSkills>
+      <ContainerSkillsBack>
+        <h3
+          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#e9f0f0] to-[#262627] bg-clip-text text-transparent"
+        >
+          BackEnd
+        </h3>
+      </ContainerSkillsBack>
+      <ContainerSkillsApr>
+        <h3
+          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#fdffff] to-[#ef0000] bg-clip-text text-transparent"
+        >
+          Aprendiendo
+        </h3>
+      </ContainerSkillsApr>
+      <ContainerTools>
+        <h3
+          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#c9fffe] to-[#ffff01] bg-clip-text text-transparent"
+        >
+          Herramientas
+        </h3>
+      </ContainerTools>
+    </SectionContainer>
+  </main>
+</Layout>
