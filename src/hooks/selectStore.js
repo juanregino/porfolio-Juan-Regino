@@ -1,3 +1,3 @@
 import { atom } from "nanostores";
 
-export const isSelect = atom("BackEnd");
+export const isSelect = atom("FrontEnd");

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const useNavState = () => {
-  const [select, setSelect] = useState("");
+  const [select, setSelect] = useState("FrontEnd");
   function manejarSelect(message) {
     setSelect(message);
   }
