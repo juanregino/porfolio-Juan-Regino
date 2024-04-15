@@ -1,28 +1,9 @@
 ---
-const stackBack = [
-  {
-    name: "NodeJS",
-    color: "#539E43",
-  },
-  {
-    name: "Spring",
-    color: "#539E43",
-  },
-  {
-    name: "Python",
-    color: "#3178C6",
-  },
- 
-  {
-    name: "Next",
-     color: "#FAFAFA",
-   },
-];
-
 import ToolTip from "../components/ToolTip.astro";
 import "../styles/global.css";
 import BoxSckills from "./BoxSckills.astro";
 import ItemsSkills from "./ItemsSkills.astro";
+import { STACKSKILLS } from "../constants/skills.js";
 ---
 
 <BoxSckills>
@@ -30,13 +11,19 @@ import ItemsSkills from "./ItemsSkills.astro";
 
   <ItemsSkills>
     {
-      stackBack.map((stack) => (
-        <li class="stack" style={{ "--background-dif": stack.color }} tool-tip>
-          <p class="stack__name">{stack.name}</p>
-          <ToolTip aria-hidden="true">{stack.name}</ToolTip>
-          <span class={`icon-${stack.name}`} />
-        </li>
-      ))
+      STACKSKILLS.filter((skill) => skill.tecnology == "Learning").map(
+        (stack) => (
+          <li
+            class="stack"
+            style={{ "--background-dif": stack.color }}
+            tool-tip
+          >
+            <p class="stack__name">{stack.name}</p>
+            <ToolTip aria-hidden="true">{stack.name}</ToolTip>
+            <span class={`icon-${stack.name}`} />
+          </li>
+        )
+      )
     }
   </ItemsSkills>
-</article>
+</BoxSckills>

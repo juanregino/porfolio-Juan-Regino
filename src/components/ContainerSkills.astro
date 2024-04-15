@@ -1,60 +1,32 @@
 ---
-const stackFront = [
-  {
-    name: "HTML",
-    color: "#EF652A",
-  },
-  {
-    name: "CSS",
-    color: "#30A9DC",
-  },
-  {
-    name: "JavaScript",
-    color: "#F0DB4F",
-  },
-  {
-    name: "TypeScript",
-    color: "#3178C6",
-  },
-  {
-    name: "Tailwind",
-    color: "#17BAB8",
-  },
-  {
-    name: "React",
-    color: "#00D8FF",
-  },
-
-  // {
-  //   name: "Next",
-  //   color: "#FAFAFA",
-  // },
-  {
-    name: "Astro",
-    color: "#FAFAFA",
-  },
-];
-
 import ToolTip from "../components/ToolTip.astro";
 import "../styles/global.css";
 import BoxSckills from "./BoxSckills.astro";
 import ItemsSkills from "./ItemsSkills.astro";
+
+import { STACKSKILLS } from "../constants/skills.js";
 ---
 
 <BoxSckills
-  class="flex flex-col items-center relative rounded-2xl p-6 border border-zinc-400 shadow-2xl overflow-hidden  "
+  class="flex flex-col items-center relative rounded-2xl p-6 border border-zinc-400 shadow-2xl overflow-hidden"
 >
   <slot />
 
   <ItemsSkills>
     {
-      stackFront.map((stack) => (
-        <li class="stack" style={{ "--background-dif": stack.color }} tool-tip>
-          <p class="stack__name">{stack.name}</p>
-          <ToolTip aria-hidden="true">{stack.name}</ToolTip>
-          <span class={`icon-${stack.name}`} />
-        </li>
-      ))
+      STACKSKILLS.filter((skill) => skill.tecnology == "FrontEnd").map(
+        (stack) => (
+          <li
+            class="stack"
+            style={{ "--background-dif": stack.color }}
+            tool-tip
+          >
+            <p class="stack__name">{stack.name}</p>
+            <ToolTip aria-hidden="true">{stack.name}</ToolTip>
+            <span class={`icon-${stack.name}`} />
+          </li>
+        )
+      )
     }
   </ItemsSkills>
 </BoxSckills>

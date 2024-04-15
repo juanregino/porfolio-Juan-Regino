@@ -1,19 +1,9 @@
 ---
-const stackBack = [
-  {
-    name: "Java",
-    color: "#FAFAFA",
-  },
-  {
-    name: "Mysql",
-    color: "#004c61",
-  },
-];
-
 import ToolTip from "../components/ToolTip.astro";
 import "../styles/global.css";
 import BoxSckills from "./BoxSckills.astro";
 import ItemsSkills from "./ItemsSkills.astro";
+import { STACKSKILLS } from "../constants/skills.js";
 ---
 
 <BoxSckills>
@@ -21,13 +11,19 @@ import ItemsSkills from "./ItemsSkills.astro";
 
   <ItemsSkills>
     {
-      stackBack.map((stack) => (
-        <li class="stack" style={{ "--background-dif": stack.color }} tool-tip>
-          <p class="stack__name">{stack.name}</p>
-          <ToolTip aria-hidden="true">{stack.name}</ToolTip>
-          <span class={`icon-${stack.name}`} />
-        </li>
-      ))
+      STACKSKILLS.filter((skill) => skill.tecnology == "BackEnd").map(
+        (stack) => (
+          <li
+            class="stack"
+            style={{ "--background-dif": stack.color }}
+            tool-tip
+          >
+            <p class="stack__name">{stack.name}</p>
+            <ToolTip aria-hidden="true">{stack.name}</ToolTip>
+            <span class={`icon-${stack.name}`} />
+          </li>
+        )
+      )
     }
   </ItemsSkills>
 </BoxSckills>
