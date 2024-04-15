@@ -81,67 +81,67 @@
     background-size: contain;
   }
   .icon-HTML {
-    background-image: url("html5.svg");
+    background-image: url("/skills-svg/html5.svg");
   }
   .icon-CSS {
-    background-image: url("css.svg");
+    background-image: url("/skills-svg/css.svg");
   }
   .icon-JavaScript {
-    background-image: url("javascript.svg");
+    background-image: url("/skills-svg/javascript.svg");
   }
   .icon-TypeScript {
-    background-image: url("typescript.svg");
+    background-image: url("/skills-svg/typescript.svg");
   }
   .icon-Spring {
-    background-image: url("spring.svg");
+    background-image: url("/skills-svg/spring.svg");
   }
   .icon-Tailwind {
-    background-image: url("tailwindcss.svg");
+    background-image: url("/skills-svg/tailwindcss.svg");
   }
   .icon-React {
-    background-image: url("react.svg");
+    background-image: url("/skills-svg/react.svg");
   }
   .icon-Python {
-    background-image: url("python.svg");
+    background-image: url("/skills-svg/python.svg");
   }
   .icon-Next {
-    background-image: url("nextjs_icon_dark.svg");
+    background-image: url("/skills-svg/nextjs_icon_dark.svg");
   }
   .icon-Astro {
-    background-image: url("astro.svg");
+    background-image: url("/skills-svg/astro.svg");
   }
   .icon-NodeJS {
-    background-image: url("nodejs.svg");
+    background-image: url("/skills-svg/nodejs.svg");
   }
   .icon-ExpressJS {
     background-image: url("../icons/expressjs.svg");
   }
   .icon-IntellijIdea {
-    background-image: url("intellijidea.svg");
+    background-image: url("/skills-svg/intellijidea.svg");
   }
   .icon-Java {
-    background-image: url("java.svg");
+    background-image: url("/skills-svg/java.svg");
   }
   .icon-Mysql {
-    background-image: url("mysql.svg");
+    background-image: url("/skills-svg/mysql.svg");
   }
   .icon-NPM {
-    background-image: url("npm.svg");
+    background-image: url("/skills-svg/npm.svg");
   }
   .icon-Notion {
-    background-image: url("notion.svg");
+    background-image: url("/skills-svg/notion.svg");
   }
   .icon-Terminal {
-    background-image: url("bash_dark.svg");
+    background-image: url("/skills-svg/bash_dark.svg");
   }
   .icon-Git {
-    background-image: url("git.svg");
+    background-image: url("/skills-svg/git.svg");
   }
   .icon-Linux {
     background-image: url("../icons/linux.png");
   }
   .icon-VS {
-    background-image: url("vscode.svg");
+    background-image: url("/skills-svg/vscode.svg");
   }
   .icon-Figma {
     background-image: url("../icons/figma.svg");
