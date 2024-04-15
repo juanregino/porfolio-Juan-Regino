@@ -1,115 +1,63 @@
 import NavProjects from "./NavProjects.jsx";
-import ReactIcon from "../icons/icons-jsx/ReactIcon.jsx";
-import JavaIcon from "../icons/icons-jsx/JavaIcon.jsx";
-import Github from "../icons/icons-jsx/Github.jsx";
-import TailwindIcon from "../icons/icons-jsx/TailwindIcon.jsx";
-import MySqlIcon from "../icons/icons-jsx/MySqlIcon.jsx";
+
 import SocialPill from "../icons/icons-jsx/SocialPill.jsx";
 
-const TAGS = {
-  REACT: {
-    name: "React",
+import Github from "../icons/icons-jsx/Github.jsx";
 
-    className: "bg-[#00D8FF]/15 text-white ",
-    icon: ReactIcon,
-  },
-  TAILWIND: {
-    name: "Tailwind",
-    class: "bg-[#17BAB8]/10 text-white",
-    icon: TailwindIcon,
-  },
-  JAVA: {
-    name: "Java",
-    class: "bg-zinc-900 text-white",
-    icon: JavaIcon,
-  },
-  MYSQL: {
-    name: "MySql",
-    class: "bg-[#00D8FF]/10 text-white ",
-    icon: MySqlIcon,
-  },
-};
-const PROJECTS = [
-  {
-    title: "Shopi",
-    description:
-      "Tienda virtual realizada con React y Tailwind donde puedes listar productos del carrito , registro de ordenes ",
-    link: "#",
-    tecnologie: "FrontEnd",
-    github: "#",
-    image: "shopimg.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
-  },
-  {
-    title: "Subastando",
-    description:
-      "Subasta virtual, en esta aplicacion simulamos una subastas virtual la cual cuenta con almacenamiento de datos en una base de datos real ",
-    link: "#",
-    tecnologie: "BackEnd",
-    github: "#",
-    image: "subastaImg.png",
-    tags: [TAGS.JAVA, TAGS.MYSQL],
-  },
-];
-
-
-
-import React, { Children, useState } from "react";
 import useNavState from "../hooks/useNavState.jsx";
-import ReactDOM from "react-dom";
-const Projects = () => {
-  const { select, manejarSelect } = useNavState();
 
- 
- 
+import { PROJECTS } from "../constants/projects.js";
+const Projects = () => {
+  const { select, handleSelect } = useNavState();
+
   return (
     <>
-      <NavProjects manejarSelect={manejarSelect}></NavProjects>
-      {PROJECTS.filter((project) => project.tecnologie === select).map(
-        (project) => (
-          <article
-            key={project.title}
-            className="flex flex-col lg:flex-row  gap-x-20 gap-y-8 py-16 border-b-2  border-white/20"
-          >
-            
-            <div className="flex flex-col gap-4 relative">
-              <h3 className="font-semibold text-blue-400 text-lg">
-                {project.tecnologie}
-              </h3>
-              <h2 className="font-bold text-3xl "> {project.title}</h2>
+      <NavProjects handleSelect={handleSelect}></NavProjects>
 
-              <ul className="flex gap-x-2 flex-row ">
-                {project.tags.map((tag) => (
-              <li>
-                <span
-                  className={` flex items-center justify-center rounded-full gap-x-3 text-[12px] px-5 py-[3px] ${tag.className}`}
-                >
-                  <tag.icon key={project.title} className="size-4" />
-                  {tag.name}
-                </span>
-              </li>
-            ))}
-              </ul>
-              <p className="font-light text-white/75  mt-5">
-                {project.description}
-              </p>
-              <div className="flex gap-x-3">
-                <SocialPill href="linkedin.com">
-              <Github className="size-6" />
-              View Code
-            </SocialPill>
-              </div>
+      {PROJECTS.filter(
+        (project) => project.tecnologie === select || project.destacado == true
+      ).map((project) => (
+        <article
+          key={project.title}
+          className="flex flex-col lg:flex-row  justify-center items-center gap-x-20 gap-y-8 pt-16 px-8 pb-7 border-b-2  border-white/20 md:w-[1000px]"
+        >
+          <div className="flex flex-col gap-4 relative text-wrap w-full  md:px-0 md:w-[40%]">
+            <h3 className="font-semibold text-yellow-400 text-md">
+              {project.tecnologie}
+            </h3>
+            <h2 className="font-bold text-3xl "> {project.title}</h2>
+
+            <ul className="flex gap-x-2 flex-row ">
+              {project.tags.map((tag) => (
+                <li>
+                  <span
+                    className={` flex items-center justify-center rounded-full gap-x-3 text-[12px] px-5 py-[3px] ${tag.class}`}
+                  >
+                    <tag.icon key={project.title} className="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="font-light text-white/75  mt-5">
+              {project.description}
+            </p>
+            <div className="flex gap-x-3 mt-4">
+              <SocialPill href="linkedin.com">
+                <Github className="size-6" />
+                View Code
+              </SocialPill>
             </div>
-            <div>
-              <img
-                className="rounded-lg shadow-5xl shadow-black/10 w-62 "
-                src={project.image}
-                alt=""
-              />
-            </div>
-          </article>
-        )
-      )}
+          </div>
+          <div className="flex items-center justify-center w-full   md:w-[45%] h-[300px]  bg-gray-700/50 overflow-hidden rounded-lg ">
+            <img
+              className="rounded-lg  shadow-5xl shadow-black/10 size-full transform translate-x-10 translate-y-12 hover:translate-x-6 hover:translate-y-6 duration-700"
+              src={project.image}
+              alt=""
+            />
+          </div>
+        </article>
+      ))}
     </>
   );
 };

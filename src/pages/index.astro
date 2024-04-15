@@ -9,17 +9,19 @@ import SocialPill from "../components/SocialPill.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import ContainerSkills from "../components/ContainerSkills.astro";
 import Projects from "../components/Projects.jsx";
-import NavProjects from "../components/NavProjects.jsx";
+
 import ContainerSkillsBack from "../components/ContainerSkillsBack.astro";
 import ContainerSkillsApr from "../components/ContainerSkillsApr.astro";
 import ContainerTools from "../components/ContainerTools.astro";
+import Leon from "../components/Leon";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout titlePage="Porfolio ">
   <main>
     <SectionContainer
       id="top"
-      class="flex flex-col items-center gap-y-3 py-36 pb-16 bg-white/5 rounded-lg md:min-h-screen"
+      class="flex flex-col items-center gap-y-3 py-36 pb-16 bg-white/5 rounded-lg md:min-h-[60vh] w-screen m-0"
     >
       <div class="grid place-content-center">
         <Badge>Disponible para trabajar</Badge>
@@ -63,7 +65,10 @@ import ContainerTools from "../components/ContainerTools.astro";
       </ul>
     </SectionContainer>
 
-    <SectionContainer id="projects" class="relative py-40 lg:px-52 px-8">
+    <SectionContainer
+      id="projects"
+      class="relative flex flex-col items-center justify-center w-screen"
+    >
       <div
         class="absolute inset-0 -z-10 h-full w-full bg-[#090c1a] bg-[size:6rem_4rem]"
       >
@@ -73,53 +78,61 @@ import ContainerTools from "../components/ContainerTools.astro";
         >
         </div>
       </div>
-      <h2 class="text-5xl font-bold text-blue-400 mb-9">Proyectos</h2>
+      <h2 class="text-5xl font-bold text-yellow-400 mb-9 mt-12">Proyectos</h2>
       <h2 class="text-xl font-semibold text-gray-400 mb-9">
         Mis proyectos destacados
       </h2>
 
       <Projects client:load />
-     
     </SectionContainer>
-    <h2
-      id="skills"
-      class="m-auto ml-8 lg:ml-52 text-5xl font-bold text-blue-400 mb-16"
-    >
-      Tecnologias
-    </h2>
+
     <SectionContainer
-      id=""
-      class="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-20 lg:px-52 mb-16 px-4"
+      id="about-me"
+      class="flex items-center justify-center flex-col "
     >
-      <ContainerSkills>
-        <h3
-          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#c9fffe] to-[#00cfef] bg-clip-text text-transparent"
-        >
-          FrontEnd
-        </h3>
-      </ContainerSkills>
-      <ContainerSkillsBack>
-        <h3
-          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#e9f0f0] to-[#262627] bg-clip-text text-transparent"
-        >
-          BackEnd
-        </h3>
-      </ContainerSkillsBack>
-      <ContainerSkillsApr>
-        <h3
-          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#fdffff] to-[#ef0000] bg-clip-text text-transparent"
-        >
-          Aprendiendo
-        </h3>
-      </ContainerSkillsApr>
-      <ContainerTools>
-        <h3
-          class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#c9fffe] to-[#ffff01] bg-clip-text text-transparent"
-        >
-          Herramientas
-        </h3>
-      </ContainerTools>
+      <h2 class="text-5xl font-bold text-yellow-400 mb-9 mt-12">Sobre Mí</h2>
+      <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer
+      id="skills"
+      class="flex flex-col items-center justify-center"
+    >
+      <h2 id="" class="m-auto text-5xl font-bold text-yellow-400 mb-16 mt-12">
+        Tecnologias
+      </h2>
+      <article
+        class="grid grid-cols-1 place-content-center lg:grid-cols-2 gap-x-20 gap-y-20 mb-16 px-10"
+      >
+        <ContainerSkills>
+          <h3
+            class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#c9fffe] to-[#00cfef] bg-clip-text text-transparent"
+          >
+            FrontEnd
+          </h3>
+        </ContainerSkills>
+        <ContainerSkillsBack>
+          <h3
+            class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#e9f0f0] to-[#262627] bg-clip-text text-transparent"
+          >
+            BackEnd
+          </h3>
+        </ContainerSkillsBack>
+        <ContainerSkillsApr>
+          <h3
+            class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#fdffff] to-[#ef0000] bg-clip-text text-transparent"
+          >
+            Aprendiendo
+          </h3>
+        </ContainerSkillsApr>
+        <ContainerTools>
+          <h3
+            class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t from-[#c9fffe] to-[#ffff01] bg-clip-text text-transparent"
+          >
+            Herramientas
+          </h3>
+        </ContainerTools>
+      </article>
     </SectionContainer>
   </main>
 </Layout>
-../components/Projects.jsx

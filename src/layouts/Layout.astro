@@ -16,7 +16,7 @@ import "@fontsource-variable/onest";
     <link rel="shortcut icon" href="leon-solo.svg" type="image/x-icon" />
     <title>{titlePage}</title>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <div
       class="absolute inset-0 -z-10 h-full w-full bg-[#090c1a] bg-[size:6rem_4rem]"
     >
@@ -26,31 +26,32 @@ import "@fontsource-variable/onest";
       >
       </div>
     </div>
-    <div class="w-full h-[80px]"></div>
-    <Header />
+    <div class="w-full h-[80px] "></div>
+    <Header class="hidden" />
     <slot />
   </body>
 </html>
 
 <style is:global>
   :root {
-    color-scheme: dark light;
+  
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 0, 0.27) transparent;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
+    color : whitesmoke;
   }
   body {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    max-width: 100vw;
+    
     position: relative;
-    scrollbar-width: 10px;
-    scrollbar-color: yellow;
+    /* scrollbar-width: 10px;
+    scrollbar-color: yellow; */
   }
   body::after {
     content: "";

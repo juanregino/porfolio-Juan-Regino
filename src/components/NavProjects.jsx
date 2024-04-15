@@ -1,27 +1,18 @@
-import React, { useEffect, useState } from "react";
+
 import SpanHeader from "./SpanHeader";
-import useNavState from "../hooks/useNavState";
-import { useStore } from "@nanostores/react";
-// import { isSelect } from "../hooks/selectStore";
-import { isSelect } from "../hooks/selectStore";
 
-const NavProjects = ({manejarSelect }) => {
+
+const NavProjects = ({ handleSelect }) => {
   const text = ["Todos", "FullStack", "FrontEnd", "BackEnd"];
-
-  
 
   return (
     <>
-      <nav className="rounded-full  border border-white/10 flex justify-start items-center gap-x-4 py-2   bg-white/5 cursor-pointer" 
-     
-      >
+      <nav className="rounded-full  border border-white/10 flex justify-center items-center lg:gap-x-4 md:px-4 py-2 px-2 bg-white/5 cursor-pointer ">
         {text.map((e) => (
           <SpanHeader
             key={e}
             onClick={() => {
-              
-              manejarSelect(e);
-              
+              handleSelect(e);
             }}
           >
             {e}

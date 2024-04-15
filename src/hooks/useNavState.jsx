@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const useNavState = () => {
   const [select, setSelect] = useState("FrontEnd");
-  function manejarSelect(message) {
+  function handleSelect(message) {
     setSelect(message);
   }
   const text = ["Todos", "FullStack", "FrontEnd", "BackEnd"];
@@ -10,7 +10,7 @@ const useNavState = () => {
   return {
     setSelect,
     select,
-    manejarSelect,
+    handleSelect,
     text
   }
 }

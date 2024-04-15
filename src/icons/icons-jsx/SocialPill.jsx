@@ -15,7 +15,7 @@ const SocialPill = ({href,children}) => {
     <>
       <a
   href={href}
-  class="shadow-lg bg-teal-500 rounded-full border border-white/10 flex justify-center items-center gap-x-3 py-2 px-4 bg-white/10 hover:scale-110 hover:bg-white/30 transition "
+  className="shadow-lg bg-teal-500 rounded-full border border-white/10 flex justify-center items-center gap-x-3 py-2 px-4 bg-white/10 hover:scale-110 hover:bg-white/30 transition "
   target="_blank"
 >
  {children}
