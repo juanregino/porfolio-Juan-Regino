@@ -3,7 +3,7 @@ import SpanHeader from "./SpanHeader";
 
 
 const NavProjects = ({ handleSelect }) => {
-  const text = ["Todos", "FullStack", "FrontEnd", "BackEnd"];
+  const text = ["Destacados", "FullStack", "FrontEnd", "BackEnd"];
 
   return (
     <>

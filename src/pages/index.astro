@@ -15,9 +15,12 @@ import ContainerSkillsApr from "../components/ContainerSkillsApr.astro";
 import ContainerTools from "../components/ContainerTools.astro";
 
 import AboutMe from "../components/AboutMe.astro";
+import { ContactUs } from "../components/ContactUs";
 ---
 
-<Layout titlePage="Porfolio Juan Regino - Software Developer con mas de 2 años de experiencia realizando proyectos formativos ">
+<Layout
+  titlePage="Porfolio Juan Regino - Software Developer con mas de 2 años de experiencia realizando proyectos formativos "
+>
   <main>
     <SectionContainer
       id="top"
@@ -33,24 +36,13 @@ import AboutMe from "../components/AboutMe.astro";
         <span class="text-white/60 font-semibold">Juan Pablo Regino</span>
       </h1>
 
-      <!-- <h2 class="text-2xl text-wrap">
-        +1 Año de experiencia. Desarrollador web<span
-          class="text-yellow-500/90"
-        >
-          De Medelin, Colombia 🏴‍☠️.</span
-        >
-        <span class="opacity-80">
-          Me especializo encrear soluciones eficientes a los retos que me pone
-          la vida</span
-        >
-      </h2> -->
       <h2 class="text-xl lg:text-2xl text-balance font-light">
         FullStack React & Java
       </h2>
 
       <ul class="flex gap-x-3 mt-12">
         <li class="flex">
-          <SocialPill href="facebook.com">
+          <SocialPill href="https://www.linkedin.com/in/juan-regino/">
             <Linkedin class="size-6" />LinkedIn</SocialPill
           >
         </li>
@@ -58,7 +50,7 @@ import AboutMe from "../components/AboutMe.astro";
           <!-- para poder que me tome la clase debo poner en el componente class={
             Astro.props.class
           } -->
-          <SocialPill href="github.com"
+          <SocialPill href="https://github.com/juanregino"
             ><Github class="size-6" /> GitHub</SocialPill
           >
         </li>
@@ -133,6 +125,10 @@ import AboutMe from "../components/AboutMe.astro";
           </h3>
         </ContainerTools>
       </article>
+    </SectionContainer>
+    <SectionContainer id="contact" class="flex flex-col justify-center items-center mb-20">
+      <h2 class="text-5xl font-bold text-yellow-400 mb-9 mt-12">Contactame</h2>
+    <ContactUs client:load></ContactUs>
     </SectionContainer>
   </main>
 </Layout>

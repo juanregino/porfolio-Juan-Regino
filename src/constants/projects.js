@@ -26,7 +26,7 @@ export const TAGS = {
   },
   MYSQL: {
     name: "MySql",
-    class: "bg-[#00D8FF]/50 text-white ",
+    class: "bg-[#00D8FF]/10 text-white ",
     icon: MySqlIcon,
   },
   JAVASCRIPT: {
@@ -52,21 +52,21 @@ export const PROJECTS = [
     description:
       "Tienda virtual realizada con React y Tailwind donde puedes listar productos del carrito , registro de ordenes ",
     link: "#",
-    tecnologie: "FrontEnd",
+    tecnologie: ["FrontEnd", "Destacados"],
     destacado: true,
     github: "#",
-    image: "project-img/shopimg.png",
+    image: "project-img/shopimg.webp",
     tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
-    title: "Subastando",
+    title: "Subastar",
     description:
       "Subasta virtual, en esta aplicacion simulamos una subastas virtual la cual cuenta con almacenamiento de datos en una base de datos real ",
-    link: "#",
+    link: "",
 
-    tecnologie: "BackEnd",
-    github: "#",
-    image: "project-img/subastaImg.png",
+    tecnologie: ["BackEnd"],
+    github: "https://github.com/juanregino/Subastar",
+    image: "project-img/subastaImg.webp",
     tags: [TAGS.JAVA, TAGS.MYSQL],
   },
   {
@@ -75,10 +75,32 @@ export const PROJECTS = [
       "Simulacion de un sistema para gestionar las tiendas de el centro comercial De Moda Outlet ",
     link: "#",
 
-    tecnologie: "BackEnd",
+    tecnologie: ["BackEnd", "Destacados"],
     destacado: true,
-    github: "#",
-    image: "project-img/subastaImg.png",
+    github: "https://github.com/juanregino/Prueba-de-rendimiento-JAVA",
+    image: "project-img/subastaImg.webp",
+    tags: [TAGS.JAVA, TAGS.MYSQL],
+  },
+  {
+    title: "Deliveloz",
+    description:
+      "La empresa Deliveloz está lanzando un nuevo servicio de delivery en la ciudad. Para gestionar eficientemente las órdenes de comida y la asignación de repartidores, Deliveloz necesita un sistema robusto que permita a los usuarios (clientes y repartidores) interactuar con la plataforma de manera sencilla y eficaz ",
+    link: "",
+
+    tecnologie: ["BackEnd"],
+    github: "https://github.com/juanregino/Subastar",
+    image: "project-img/subastaImg.webp",
+    tags: [TAGS.JAVA, TAGS.MYSQL],
+  },
+  {
+    title: "VuelaYa",
+    description:
+      "Aplicación en Java utilizando JDBC que permita gestionar las reservaciones de vuelos de una aerolínea. La aplicación debe permitir el manejo de aviones, vuelos, pasajeros y reservaciones. Cada vuelo estará asociado a un solo avión y puede tener múltiples pasajeros através de las reservaciones. Los pasajeros pueden tener múltiples reservaciones. ",
+    link: "",
+
+    tecnologie: ["BackEnd"],
+    github: "https://github.com/juanregino/Subastar",
+    image: "project-img/subastaImg.webp",
     tags: [TAGS.JAVA, TAGS.MYSQL],
   },
   {
@@ -87,9 +109,42 @@ export const PROJECTS = [
       "Aplicacion para publicar ofertas laborales en la cual podemos registrar empresas, agregar , actualizar, eliminar , filtrar y listar ofertas laborales; Esta apicacion cuanta con un sistema de verificacion, que valida si el usuario esta registrado y permite el acceso , simulando una base de datos con JSON-SERVER",
     link: "#",
 
-    tecnologie: "FrontEnd",
+    tecnologie: ["FrontEnd"],
     github: "#",
-    image: "project-img/gpocket.png",
+    image: "project-img/gpocket.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Mi Terminapp",
+    description:
+      "Terminal de buses virtual totalmente funcional realizada con HTML y CSS, esta aplicacion es un reto demasiado interesante debido a que se realizo sin usar JavaScript ",
+    link: "#",
+
+    tecnologie: ["FrontEnd"],
+    github: "https://github.com/juanregino/mi_terminapp",
+    image: "project-img/mi-terminapp.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Luxury Autohouse",
+    description:
+      "Simulacion de un catalogo de autos de lujo donde puedes filtrar por marca año y modelo y muchos mas filtros",
+    link: "#",
+
+    tecnologie: ["FrontEnd"],
+    github: "https://github.com/juanregino/mi_terminapp",
+    image: "project-img/filter-vehicles.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Hypotestment",
+    description:
+      "Aplicacion para creditos hipotecarios donde los usurios pueden tener dos roles deudor,inversor y debido al role pueden ya sea hipotecar su vivienda o invertir en una viviendas",
+    link: "#",
+
+    tecnologie: ["FrontEnd"],
+    github: "https://github.com/juanregino/mi_terminapp",
+    image: "project-img/hypotestment.webp",
     tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
   },
 ];

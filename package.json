@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/react": "^3.1.1",
     "@astrojs/tailwind": "^5.1.0",
+    "@emailjs/browser": "^4.3.3",
     "@fontsource-variable/onest": "^5.0.3",
     "@nanostores/react": "^0.7.2",
     "@splinetool/react-spline": "^2.2.6",
