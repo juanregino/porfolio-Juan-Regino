@@ -7,7 +7,7 @@ const NavProjects = ({ handleSelect }) => {
 
   return (
     <>
-      <nav className="rounded-full  border border-white/10 flex justify-center items-center lg:gap-x-4 md:px-4 py-2 px-2 bg-white/5 cursor-pointer ">
+      <nav className="rounded-full  border border-white/10 flex justify-center items-center lg:gap-x-4  py-2 px-0 md:px-3 bg-white/5 cursor-pointer ">
         {text.map((e) => (
           <SpanHeader
             key={e}
