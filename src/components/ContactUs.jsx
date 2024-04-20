@@ -27,14 +27,7 @@ export const ContactUs = () => {
       onSubmit={sendEmail}
       className="flex flex-col items-center justify-center gap-y-5"
     >
-      {/* <label>Name</label>
-      <input type="text" name="user_name" className="rounded-full" />
-      <label>Email</label>
-      <input type="email" name="user_email" className="text-black" />
-      <label>Message</label>
-      <textarea name="message" className="text-black" />
-      <input type="submit" value="Send" /> */}
-      <div className="flex  gap-x-3">
+      <div className="flex px-4 gap-x-3">
         <div className="relative">
           <input
             type="text"
@@ -70,7 +63,7 @@ export const ContactUs = () => {
         <textarea
           id="floating_message"
           name="message"
-          className="block  px-2.5 pb-2.5 pt-5  text-sm   bg-gray-700 border-0 rounded-lg appearance-none text-white border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-0  peer w-[400px]"
+          className="block  px-2.5 pb-2.5 pt-5  text-sm   bg-gray-700 border-0 rounded-lg appearance-none text-white border-gray-600 focus:border-blue-500 focus:outline-none focus:ring-0  peer w-[350px] md:w-[400px]"
           placeholder=" "
           rows={1}
         />
@@ -84,7 +77,7 @@ export const ContactUs = () => {
       <input
         type="submit"
         value="Enviar"
-        className="bg-white/10 rounded-lg py-2 w-1/2 hover:bg-white/30 hover:text-yellow-400 duration-300 hover:scale-110  border border-white/10 cursor-pointer"
+        className="bg-white/10 rounded-lg py-2 w-1/2 hover:bg-white/30  duration-300 hover:scale-110  border border-white/10 cursor-pointer"
       />
     </form>
   );
