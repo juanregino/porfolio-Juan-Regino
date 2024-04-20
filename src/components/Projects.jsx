@@ -22,7 +22,7 @@ const Projects = () => {
         (project) => (
           <article
             key={project.title}
-            className="flex flex-col lg:flex-row  justify-center items-center gap-x-20 gap-y-8 pt-16 px-8 pb-7 border-b-2  border-white/20 md:w-[1000px]"
+            className="flex flex-col lg:flex-row  justify-center items-center gap-x-20 gap-y-8 pt-16 px-8 pb-7 border-b-2  border-white/20 lg:w-[1000px]"
           >
             <div className="flex flex-col gap-4 relative text-wrap w-full  md:px-0 md:w-[40%]">
               <h3 className="font-semibold text-yellow-400 text-md">
@@ -31,8 +31,8 @@ const Projects = () => {
               <h2 className="font-bold text-3xl "> {project.title}</h2>
 
               <ul className="flex gap-x-2 flex-row ">
-                {project.tags.map((tag) => (
-                  <li>
+                {project.tags.map((tag,index) => (
+                  <li key={index}>
                     <span
                       className={` flex items-center justify-center rounded-full gap-x-3 text-[12px] px-5 py-[3px] tracking-[0.06rem]  ${tag.class}`}
                     >
