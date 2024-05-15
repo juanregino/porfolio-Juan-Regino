@@ -4,16 +4,39 @@ export const STACKSKILLS = [
     color: "#FAFAFA",
     tecnology: "BackEnd",
   },
+
+  {
+    name: "Spring",
+    color: "#539E43",
+    tecnology: "BackEnd",
+  },
+  {
+    name: "Postman",
+    color: "#EF652A",
+    tecnology: "BackEnd",
+  },
+  {
+    name: "MongoDB",
+    color: "#539E43",
+    tecnology: "BackEnd",
+  },
   {
     name: "Mysql",
     color: "#004c61",
     tecnology: "BackEnd",
   },
   {
+    name: "PostgreSQL",
+    color: "#3DA9F2",
+    tecnology: "BackEnd",
+  },
+
+  {
     name: "HTML",
     color: "#EF652A",
     tecnology: "FrontEnd",
   },
+
   {
     name: "CSS",
     color: "#30A9DC",
@@ -54,11 +77,7 @@ export const STACKSKILLS = [
     color: "#539E43",
     tecnology: "Learning",
   },
-  {
-    name: "Spring",
-    color: "#539E43",
-    tecnology: "Learning",
-  },
+
   {
     name: "Python",
     color: "#3178C6",
@@ -99,6 +118,16 @@ export const STACKSKILLS = [
   {
     name: "Terminal",
     color: "#FAFAFA",
+    tecnology: "Herramientas",
+  },
+  {
+    name: "Docker",
+    color: "#30A9DC",
+    tecnology: "Herramientas",
+  },
+  {
+    name: "PowerBI",
+    color: "#F0DB4F",
     tecnology: "Herramientas",
   },
 ];
