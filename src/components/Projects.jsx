@@ -30,7 +30,7 @@ const Projects = () => {
               </h3>
               <h2 className="font-bold text-3xl "> {project.title}</h2>
 
-              <ul className="flex gap-x-2 flex-row ">
+              <ul className="flex gap-x-2 flex-row flex-wrap gap-y-2">
                 {project.tags.map((tag,index) => (
                   <li key={index}>
                     <span

@@ -6,6 +6,11 @@ import JavaIcon from "../icons/icons-jsx/JavaIcon.jsx";
 
 import TailwindIcon from "../icons/icons-jsx/TailwindIcon.jsx";
 import MySqlIcon from "../icons/icons-jsx/MySqlIcon.jsx";
+import NextIcon from "../icons/icons-jsx/NextIcon.jsx";
+import TypeScriptIcon from "../icons/icons-jsx/TypeScriptIcon.jsx";
+import MongoIcon from "../icons/icons-jsx/MongoIcon.jsx";
+import PostgresIcon from "../icons/icons-jsx/PostgresIcon.jsx";
+import SpringBootIcon from "../icons/icons-jsx/SpringBootIcon.jsx";
 
 export const TAGS = {
   REACT: {
@@ -45,8 +50,53 @@ export const TAGS = {
     class: "bg-[#309ecc]/40 text-white",
     icon: CSSIcon,
   },
+  NEXT: {
+    name: "Next",
+    class: "bg-[#000]/80 text-white ",
+    icon: NextIcon,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#3178C6]/40 text-white",
+    icon: TypeScriptIcon,
+  },
+  MONGO: {
+    name: "MongoDB",
+    class: "bg-[#47A248]/40 text-white ",
+    icon: MongoIcon,
+  },
+  POSTGRES: {
+    name: "PostgreSQL",
+    class: "bg-[#00D8FF]/10 text-white ",
+    icon: PostgresIcon,
+  },
+  SPRING: {
+    name: "Spring",
+    class: "bg-[#539E43]/40 text-white",
+    icon: SpringBootIcon,
+  },
 };
 export const PROJECTS = [
+  {
+    title: "FleetNav",
+    description:
+      "FleetNav es una aplicación administrativa para propietarios de flotas, diseñada para gestionar vehículos y conductores de manera integral y eficiente. Utiliza WebSocket para comunicación en tiempo real mediante un chat en vivo, emplea una arquitectura multitenant para asegurar la segregación de datos y escalabilidad, y se basa en microservicios con Spring Cloud para dividir la aplicación en servicios independientes, mejorando la mantenibilidad y funcionalidad específica.",
+    link: "https://github.com/juanregino/fleetNav-microservices",
+    tecnologie: ["FullStack", "Destacados"],
+    destacado: true,
+    github: "https://github.com/juanregino/fleetNav-microservices",
+    image: "project-img/fleetNav.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.REACT,
+      TAGS.TAILWIND,
+
+      TAGS.TYPESCRIPT,
+      TAGS.SPRING,
+      TAGS.MONGO,
+      TAGS.POSTGRES,
+    ],
+  },
   {
     title: "Shopi",
     description:
