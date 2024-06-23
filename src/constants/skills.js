@@ -125,9 +125,5 @@ export const STACKSKILLS = [
     color: "#30A9DC",
     tecnology: "Herramientas",
   },
-  {
-    name: "PowerBI",
-    color: "#F0DB4F",
-    tecnology: "Herramientas",
-  },
+  
 ];

@@ -11,6 +11,7 @@ import TypeScriptIcon from "../icons/icons-jsx/TypeScriptIcon.jsx";
 import MongoIcon from "../icons/icons-jsx/MongoIcon.jsx";
 import PostgresIcon from "../icons/icons-jsx/PostgresIcon.jsx";
 import SpringBootIcon from "../icons/icons-jsx/SpringBootIcon.jsx";
+import DockerIcon from "../icons/icons-jsx/DockerIcon.jsx";
 
 export const TAGS = {
   REACT: {
@@ -75,6 +76,11 @@ export const TAGS = {
     class: "bg-[#539E43]/40 text-white",
     icon: SpringBootIcon,
   },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#309ecc]/40 text-white",
+    icon: DockerIcon,
+  },
 };
 export const PROJECTS = [
   {
@@ -109,6 +115,29 @@ export const PROJECTS = [
     tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
+    title: "JCR salon",
+    description:
+      "JCR Salon es un sistema integral de gestión de citas diseñado para salones de belleza y peluquerías. El sistema permite una administración eficiente de empleados, servicios, clientes y citas. Además, ofrece funcionalidades avanzadas como la notificación por correo electrónico y la gestión de la seguridad de los usuarios, por medio de Spring Security.",
+    link: "#",
+
+    tecnologie: ["BackEnd", "Destacados"],
+    destacado: true,
+    github: "https://github.com/juanregino/Prueba-de-rendimiento-JAVA",
+    image: "project-img/subastaImg.webp",
+    tags: [TAGS.SPRING, TAGS.POSTGRES, TAGS.DOCKER],
+  },
+  {
+    title: "EduJourney",
+    description:
+      "EduJourney es una plataforma de aprendizaje en línea para facilitar el acceso a curos y materiales educativos. La plataforma debe permitir a los usuarios inscribirse en cursos, acceder al contenido, participar en evaluaciones y comunicarse con los instructores.",
+    link: "",
+
+    tecnologie: ["BackEnd"],
+    github: "https://github.com/juanregino/EduJourney",
+    image: "project-img/subastaImg.webp",
+    tags: [TAGS.SPRING, TAGS.POSTGRES, TAGS.DOCKER],
+  },
+  {
     title: "Subastar",
     description:
       "Subasta virtual, en esta aplicacion simulamos una subastas virtual la cual cuenta con almacenamiento de datos en una base de datos real ",
@@ -119,18 +148,7 @@ export const PROJECTS = [
     image: "project-img/subastaImg.webp",
     tags: [TAGS.JAVA, TAGS.MYSQL],
   },
-  {
-    title: "De Moda Outlet",
-    description:
-      "Simulacion de un sistema para gestionar las tiendas de el centro comercial De Moda Outlet ",
-    link: "#",
-
-    tecnologie: ["BackEnd", "Destacados"],
-    destacado: true,
-    github: "https://github.com/juanregino/Prueba-de-rendimiento-JAVA",
-    image: "project-img/subastaImg.webp",
-    tags: [TAGS.JAVA, TAGS.MYSQL],
-  },
+  
   {
     title: "Deliveloz",
     description:
@@ -142,17 +160,7 @@ export const PROJECTS = [
     image: "project-img/subastaImg.webp",
     tags: [TAGS.JAVA, TAGS.MYSQL],
   },
-  {
-    title: "VuelaYa",
-    description:
-      "Aplicación en Java utilizando JDBC que permita gestionar las reservaciones de vuelos de una aerolínea. La aplicación debe permitir el manejo de aviones, vuelos, pasajeros y reservaciones. Cada vuelo estará asociado a un solo avión y puede tener múltiples pasajeros através de las reservaciones. Los pasajeros pueden tener múltiples reservaciones. ",
-    link: "",
-
-    tecnologie: ["BackEnd"],
-    github: "https://github.com/juanregino/Subastar",
-    image: "project-img/subastaImg.webp",
-    tags: [TAGS.JAVA, TAGS.MYSQL],
-  },
+ 
   {
     title: "JobFinder",
     description:
