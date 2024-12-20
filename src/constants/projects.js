@@ -12,6 +12,7 @@ import MongoIcon from "../icons/icons-jsx/MongoIcon.jsx";
 import PostgresIcon from "../icons/icons-jsx/PostgresIcon.jsx";
 import SpringBootIcon from "../icons/icons-jsx/SpringBootIcon.jsx";
 import DockerIcon from "../icons/icons-jsx/DockerIcon.jsx";
+import NestJS from "../icons/icons-jsx/NestIcon.jsx";
 
 export const TAGS = {
   REACT: {
@@ -81,6 +82,11 @@ export const TAGS = {
     class: "bg-[#309ecc]/40 text-white",
     icon: DockerIcon,
   },
+  NESTJS : {
+    name: "NestJs",
+    class: "bg-[#e0234e]/40 text-white",
+    icon: NestJS,
+  }
 };
 export const PROJECTS = [
   {
@@ -100,6 +106,43 @@ export const PROJECTS = [
       TAGS.TYPESCRIPT,
       TAGS.SPRING,
       TAGS.MONGO,
+      TAGS.POSTGRES,
+    ],
+  },
+  {
+    title: "Arly 2.0",
+    description:
+      "Arly 2.0 es una herramienta innovadora para facilitar la operacion de una empresa dedicada al reciclaje ",
+    link: "https://arly2-0.vercel.app/",
+    tecnologie: ["FullStack", "Destacados"],
+    destacado: true,
+    github: "",
+    image: "project-img/arly2.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.REACT,
+      TAGS.TAILWIND,
+
+      TAGS.TYPESCRIPT,
+      TAGS.NESTJS,
+      TAGS.POSTGRES,
+    ],
+  },
+  {
+    title: "TUTI-CARGO",
+    description:
+      " He colaborado desde sus inicios en la creacion de una solucion tecnologica para la gestion logisitica de la empresa Ecuatoriana TUTI, automitizando sus procesos del dia a dia para gestionar de manera eficiente sus operaciones",
+    link: "https://tuti.com.ec/",
+    tecnologie: ["FullStack", "Destacados"],
+    destacado: true,
+    github: "",
+    image: "project-img/tuti.png",
+    tags: [
+      TAGS.REACT,
+      TAGS.TAILWIND,
+
+      TAGS.TYPESCRIPT,
+      TAGS.SPRING,
       TAGS.POSTGRES,
     ],
   },
@@ -148,7 +191,7 @@ export const PROJECTS = [
     image: "project-img/subastaImg.webp",
     tags: [TAGS.JAVA, TAGS.MYSQL],
   },
-  
+
   {
     title: "Deliveloz",
     description:
@@ -160,7 +203,7 @@ export const PROJECTS = [
     image: "project-img/subastaImg.webp",
     tags: [TAGS.JAVA, TAGS.MYSQL],
   },
- 
+
   {
     title: "JobFinder",
     description:
